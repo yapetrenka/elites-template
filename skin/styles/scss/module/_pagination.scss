@@ -1,0 +1,17 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  &__item {
+    @extend %btn;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+    &.active {
+      color: $primary-color;
+    }
+    &:not(.active):hover {
+      color: $bg-color;
+    }
+  }
+}

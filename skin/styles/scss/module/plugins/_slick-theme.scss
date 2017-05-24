@@ -1,0 +1,100 @@
+/* Slider */
+
+.slick-list {
+    .slick-loading & {
+        background: url('/skin/images/ajax-loader.gif') center center no-repeat;
+    }
+}
+
+.slick-slide {
+    outline: none;
+    img {
+        display: inline-block;
+    }
+}
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+    background: transparent;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    font-size: 0;
+    height: 40px;
+    margin-top: -20px;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transition: all .2s ease;
+    width: 20px;
+    z-index: 1;
+    &:hover, &:focus {
+        outline: none;
+    }
+    &.slick-disabled {
+        opacity: 0.5;
+    }
+    &:before {
+        content: url('/skin/images/arrow.svg');
+        position: absolute;
+        top: 13px;
+    }
+}
+
+
+.slick-prev {
+    left: 0;
+    &:before {
+        transform: rotate(180deg);
+        left: 0;
+    }
+}
+
+.slick-next {
+    right: 0;
+    &:before {
+        right: 0;
+    }
+}
+
+/* Dots */
+
+.slick-dots {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    left: 35px;
+    bottom: 40px;
+    li {
+        display: inline-block;
+        margin: 0 3px;
+        padding: 0;
+        position: relative;
+        button {
+            background-color: transparent;
+            border-radius: 50%;
+            border: 2px solid $light-color;
+            color: transparent;
+            cursor: pointer;
+            font-size: 0;
+            height: 16px;
+            line-height: 0;
+            opacity: .6;
+            outline: none;
+            vertical-align: middle;
+            transition: all .2s ease;
+            width: 16px;
+            &:hover, &:focus {
+                background-color: rgba($light-color, .5);
+                outline: none;
+                opacity: 1;
+            }
+        }
+        &.slick-active button {
+            background-color: $light-color;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.go-up {
+  @extend %centered-content;
+  background: $light-color;
+  border: 2px solid $primary-color;
+  color: $primary-color;
+  height: 40px;
+  opacity: 0.8;
+  position: fixed;
+  right: -40px;
+  bottom: 30px;
+  transition: all 0.2s ease;
+  width: 40px;
+  z-index: 100;
+  &:hover {
+    opacity: 1;
+  }
+  &.visible {
+    right: 30px;
+  }
+  .svg-icon {
+    transform: rotate(-90deg);
+  }
+
+  @include phones {
+    bottom: 10px;
+    &.visible {
+      right: 10px;
+    }
+  }
+}

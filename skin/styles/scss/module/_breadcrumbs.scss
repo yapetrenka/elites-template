@@ -1,0 +1,11 @@
+.breadcrumbs {
+  color: $base-color-light;
+  &__item {
+    &:not(:last-child) {
+      &:after {
+        content: '/';
+        margin: 0 5px;
+      }
+    }
+  }
+}
