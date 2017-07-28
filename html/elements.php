@@ -39,13 +39,13 @@ include($_SERVER['DOCUMENT_ROOT']."/templates/main/header.tpl.php");
                 </div>
                 <div class="grid">
                     <div class="grid__cell">
-                        <label class="switch"><input type="radio" name="radio" class="switch__inp" checked><span class="switch__el switch__el_radio"></span> radio 1</label>
+                        <label class="switch"><input type="radio" name="radio" class="switch__inp" checked><span class="switch__el"></span> radio 1</label>
                     </div>
                     <div class="grid__cell">
-                        <label class="switch"><input type="radio" name="radio" class="switch__inp" checked><span class="switch__el switch__el_radio"></span> radio 2</label>
+                        <label class="switch"><input type="radio" name="radio" class="switch__inp" checked><span class="switch__el"></span> radio 2</label>
                     </div>
                     <div class="grid__cell">
-                        <label class="switch"><input type="checkbox" name="checkbox" class="switch__inp" checked><span class="switch__el switch__el_checkbox"></span> checkbox</label>
+                        <label class="switch"><input type="checkbox" name="checkbox" class="switch__inp" checked><span class="switch__el"></span> checkbox</label>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@ include($_SERVER['DOCUMENT_ROOT']."/templates/main/header.tpl.php");
         <div class="design-elements__row">
             <div class="design-elements__item">
                 <div class="ttl-base">Кнопки</div>
-                <a href="#dialog" class="js-open-dialog btn btn_base" data-title="Диалог">Открыть диалог</a>
+                <a href="#dialog" class="js-openDialog btn btn_base" data-title="Диалог">Открыть диалог</a>
                 <button class="btn btn_primary">Кнопка</button>
                 <button class="btn btn_secondary">Кнопка</button>
                 <button class="btn btn_attention">Кнопка</button>
@@ -64,7 +64,7 @@ include($_SERVER['DOCUMENT_ROOT']."/templates/main/header.tpl.php");
                 </div>
                 <div class="grid">
                     <div class="grid__cell">
-                        <h4>svg</h4
+                        <h4>svg</h4>
                         <svg class="svg-icon icon-arrow">
                             <use xlink:href="/skin/images/svg-sprite.svg#arrow"></use>
                         </svg>

@@ -1,13 +1,14 @@
+var $document = $(document),
+    $window = $(window);
+
 $(function(){
     'use strict';
 
-	var $document = $(document);
-
-    $('.js-phone-mask').mask("+7 (999) 999-99-99");
+    $('.js-phoneMask').mask("+7 (999) 999-99-99");
 	
-	$('.js-open-dialog').MyCMSDialog();
+	$('.js-openDialog').MyCMSDialog();
 	
-	$document.on('click', '.js-open-dialog-ajax', function(){
+	$document.on('click', '.js-openDialogAjax', function(){
         var $this = $(this),
             title = $this.data('title'),
             cssClass = $this.data('cssclass'),
@@ -22,7 +23,7 @@ $(function(){
                     'cssClass': cssClass,
                     'content': data,
                     'open': function(){
-                        $('.phone-mask').mask("+7 (999)-999-99-99");
+                        $('.js-phoneMask').mask("+7 (999)-999-99-99");
                     }
                 });
             }
@@ -30,7 +31,7 @@ $(function(){
         return false;
     });
 
-    $document.on('click', '.js-close-dialog', function(){
+    $document.on('click', '.js-closeDialog', function(){
         MyCMSDialog.closeAll();
         return false;
     });
@@ -52,17 +53,9 @@ $(function(){
 
     svg4everybody();
 
-    $('#main_slider').slick({
-        fade: true,
-        infinite: true,
-        arrows: false,
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 10000,
-        speed: 800
-    });
+    $('.js-slider').slick();
 
-    $document.on('click','.js-go-up',function(){
+    $document.on('click','.js-goUp',function(){
         $('body,html').animate({
             scrollTop: 0
         }, 800);
@@ -71,10 +64,14 @@ $(function(){
 
 });
 
-$(window).on('scroll', function(){
-    if ($(this).scrollTop() > 300) {
-        $('.js-go-up').addClass('visible');
-    } else {
-        $('.js-go-up').removeClass('visible');
-    }
+$window.on('scroll', function(){
+    scrollTgglClass($('.js-goUp'), 300, 'visible');
 });
+
+function scrollTgglClass(obj, space, className) {
+    if($window.scrollTop() > space) {
+        obj.addClass(className);
+    } else {
+        obj.removeClass(className);
+    }
+}

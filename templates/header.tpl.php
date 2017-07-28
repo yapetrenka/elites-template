@@ -1,6 +1,6 @@
 <?header ("Content-Type: text/html;charset=utf-8"); ?>
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="utf-8">
 	<title><?=trim($PAGE['meta_title'])?></title>
@@ -15,6 +15,4 @@
 	<link rel="stylesheet" href="/skin/styles/foundation.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="/skin/styles/app.css" type="text/css" media="screen">
 </head>
-
 <body>
-    <div class="main-container<?=$page=='index' ? ' index-page' : ''?>">

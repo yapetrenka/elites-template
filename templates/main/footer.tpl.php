@@ -7,10 +7,10 @@
     </div>
 </footer>
 
-<a href="#" class="js-go-up go-up">
+<a href="#" class="js-goUp go-up">
     <svg class="svg-icon icon-arrow">
         <use xlink:href="/skin/images/svg-sprite.svg#arrow"></use>
     </svg>
 </a>
-
+</div><?//.main-container?>
 <?include($_SERVER['DOCUMENT_ROOT']."/templates/footer.tpl.php")?>

@@ -1,4 +1,5 @@
 <?include($_SERVER['DOCUMENT_ROOT']."/templates/header.tpl.php")?>
+<div class="main-container<?=$page=='index' ? ' index-page' : ''?>">
 <header class="main-header">
     <div class="layout-main">
         header

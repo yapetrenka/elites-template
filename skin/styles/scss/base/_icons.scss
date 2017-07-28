@@ -3,6 +3,10 @@
   fill: currentColor;
   height: 1em;
   vertical-align: middle;
+  a &,
+  button & {
+    pointer-events: none;
+  }
 }
 
 .icon {
