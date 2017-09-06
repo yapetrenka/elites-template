@@ -24,6 +24,7 @@ $font-family-base: Arial, sans-serif !default;
 $font-family-heading: Arial, sans-serif !default;
 
 $font-size-base: 16px !default;
+$svg-size-base: ($font-size-base/1px) !default;
 
 //** Buttons
 $btn-border-width: 2px;
