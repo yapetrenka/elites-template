@@ -13,7 +13,7 @@ $(function(){
             title = $this.data('title'),
             cssClass = $this.data('cssclass'),
             hrefID = $this.attr('href').split('#'),
-            url = '/templates/block/'+hrefID[1]+'.tpl.php';
+            url = '/templates/popup/'+hrefID[1]+'.tpl.php';
         $.ajax({
             url: url,
             success: function(data){

@@ -65,36 +65,17 @@ include($_SERVER['DOCUMENT_ROOT']."/templates/main/header.tpl.php");
                 <div class="grid">
                     <div class="grid__cell">
                         <h4>svg</h4>
-                        <svg class="svg-icon icon-arrow">
-                            <use xlink:href="/skin/images/svg-sprite.svg#arrow"></use>
-                        </svg>
-                        <svg class="svg-icon icon-phone">
-                            <use xlink:href="/skin/images/svg-sprite.svg#phone"></use>
-                        </svg>
-                        <svg class="svg-icon icon-point">
-                            <use xlink:href="/skin/images/svg-sprite.svg#point"></use>
-                        </svg>
-                        <svg class="svg-icon icon-search">
-                            <use xlink:href="/skin/images/svg-sprite.svg#search"></use>
-                        </svg>
-                        <svg class="svg-icon icon-email">
-                            <use xlink:href="/skin/images/svg-sprite.svg#email"></use>
-                        </svg>
-                        <svg class="svg-icon icon-facebook">
-                            <use xlink:href="/skin/images/svg-sprite.svg#facebook"></use>
-                        </svg>
-                        <svg class="svg-icon icon-instagram">
-                            <use xlink:href="/skin/images/svg-sprite.svg#instagram"></use>
-                        </svg>
-                        <svg class="svg-icon icon-vk">
-                            <use xlink:href="/skin/images/svg-sprite.svg#vk"></use>
-                        </svg>
-                        <svg class="svg-icon icon-ok">
-                            <use xlink:href="/skin/images/svg-sprite.svg#ok"></use>
-                        </svg>
-                        <svg class="svg-icon icon-twitter">
-                            <use xlink:href="/skin/images/svg-sprite.svg#twitter"></use>
-                        </svg>
+                        <?
+                        $dir  = $_SERVER['DOCUMENT_ROOT'].'/skin/images/svg-sprite/';
+                        $files = scandir($dir);
+                        foreach ($files as $file){
+                        $file = substr($file, 0, -4);
+                        if ($file) {?>
+                            <svg class="svg-icon icon-<?=$file?>">
+                                <use xlink:href="/skin/images/svg-sprite.svg#<?=$file?>"></use>
+                            </svg>
+                        <?}
+                        }?>
                     </div>
                     <div class="grid__cell">
                         <h4>png</h4>

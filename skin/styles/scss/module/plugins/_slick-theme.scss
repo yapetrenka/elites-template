@@ -63,13 +63,14 @@
 /* Dots */
 
 .slick-dots {
+    display: flex;
     list-style: none;
     padding: 0;
     position: absolute;
-    left: 35px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 40px;
     li {
-        display: inline-block;
         margin: 0 3px;
         padding: 0;
         position: relative;
